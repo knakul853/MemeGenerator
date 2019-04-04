@@ -18,7 +18,6 @@ class MemeGenerator extends React.Component{
         .then(response => response.json())
         .then(response =>{
             const {memes} = response.data
-            console.log(memes[0])
             this.setState({ allMemeImages:memes })
         } )
 
@@ -40,7 +39,6 @@ class MemeGenerator extends React.Component{
         const randNum = Math.floor(Math.random() * this.state.allMemeImages.length)
         const randMemeImg = this.state.allMemeImages[randNum].url
         this.setState({ randomImg :randMemeImg })
-        console.log("Dfgdf")
 
     }
     
